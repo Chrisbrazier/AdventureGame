@@ -53,16 +53,33 @@ int main() {
     std::cout << "2). Slowly inch your way into the entrance of the cavernous Dungeon..\n";
     std::cout << "3). Have a panic attack, turn around and exit. No gold is worth this..\n";
 
-    if(Choice == 1) {
 
-    } else if(Choice == 2) {
-
-    } else if(Choice == 3) {
-
+    // Store the players choice, create options for player items 
+    std::cin >> Choice;
+    bool sword;
+    bool armor;
+    bool health;
+    bool magicspell;
+    bool continueahead = false;
+    // Outcomes of all 3 user choices and a loop back
+    while(continueahead = false) {
+    if(Choice = 1) {
+    std::cout << "Your boldness pays off, you crash straight through a hidden wall and discover a rudimentary set of armor and a sword.\n";
+    sword = true;
+    continueahead = true;
+    } else if(Choice = 2) {
+        std::cout << "You move too cautiously, and stub your toe on a corpse. In a stroke of luck, you find a health potion under the dusty bones.\n";
+        health = true;
+        continueahead = true;
+    } else if(Choice = 3) {
+        std::cout << "This sort of cowardice is not very heroic, maybe try again later when you're feeling braver? DIE INSTANTLY\n";
+        return 0;
     } else if(Choice != 1 || 2 || 3) {
         std::cout << "Pick a real option you dummy."; 
+        std::cin >> Choice;
+        continueahead = true;
     }
-
+    }
 
 
 
